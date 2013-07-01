@@ -1,0 +1,62 @@
+%h1
+  Box Zoo
+
+/ Simple draggable box
+.page
+  %label
+    .latin
+      Boxicus (Liberis) Vulgaris
+  .box-1.box.draggable
+  :javascript
+    $('.box-1').draggable();
+
+/ Draggable box that sensitively scrolls the page with it
+.page
+  %label
+    .latin
+      Boxicus (Liberis) Sensitivus
+  .box-2.box.draggable
+  :javascript
+    $('.box-2').draggable({scroll: true, scrollSensitivity: 600});
+
+/ Draggable boxes that can only drag horizontally
+.page
+  %label
+    .latin
+      Boxicus (Liberis) Horizonticus
+    .details
+      May only be dragged horizontally
+  .box-3.box.draggable
+  .box-3.box.draggable
+  .box-3.box.draggable
+  :javascript
+    $('.box-3').draggable({axis: 'x'});
+
+/ Draggable boxes that can only drag horizontally
+.page
+  .box-4.box.draggable
+  .box-4.box.draggable{style: 'left: 150px; top: -151px;'}
+  .box-4.box.draggable{style: 'left: 300px; top: -302px;'}
+  :javascript
+    $('.box-4').draggable({axis: 'y'});
+
+/ Draggable boxes that can only drag horizontally
+.page
+  .box-4.box.draggable
+  .box-4.box.draggable{style: 'left: 150px; top: -151px;'}
+  .box-4.box.draggable{style: 'left: 300px; top: -302px;'}
+  :javascript
+    $('.box-4').draggable({axis: 'y'});
+
+/ Draggable boxes that can only drag horizontally
+.page#container-5
+  .square
+    .box-5.box.draggable
+    :javascript
+      $('.box-5').draggable({containment: 'parent'});
+
+/ Draggable boxes that can only drag horizontally
+.page#container-6
+  .box-6.box.draggable
+  :javascript
+    $('.box-6').draggable({containment: '#container-6'});
